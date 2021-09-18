@@ -1,0 +1,25 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% comment %} {{ print( lists )}} {% endcomment %}
+{% comment %} {{ a['name'] }} {% endcomment %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            {% for list in lists %}
+                <div class="col">
+                    <div class="card">
+                    <img src="https://th.bing.com/th?q=Iron+Man+Action+Figure&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&adlt=moderate&t=1&mw=247" class="card-img-top des-img" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Card title {{ name }}</h5>
+                        <p class="card-text text-danger">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    </div>
+                </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+    
+{% endblock %}</title>
